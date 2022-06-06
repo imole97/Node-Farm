@@ -1,6 +1,7 @@
 const fs = require('fs')
 const http = require('http')
 const url = require('url')
+const replaceTemplate = require('./modules/replaceTemplate')
 //the fs module returns an object that is stored in the fs variable
 // readFileSync takes in file path, and character encoding to prevent buffer output
 
@@ -102,7 +103,7 @@ server.listen(5000, '127.0.0.1', () => {
 
 
 
-
+// every file in Node.js is treated as a module
 //http header is a piece of info about the reponse the server sends
 ///http headers should be declared before sending server response
 //dot in './' indicates where the script is running except when using require and __dirname is where the current file is located
